@@ -1,19 +1,29 @@
-import { Fragment } from "react";
-import Navbar from "./components/header";
-import HeroSection from "./components/hero";
-import Navigators from "./components/ui-navigations";
-import JobListings from "./components/Listings";
+import {Route, createBrowserRouter, createRoutesFromElements, RouterProvider} from 'react-router-dom';
 
+import Home from './Pages/HomePage';
+import Navbar from './components/header';
+import MainLayout from './layouts/MainLayout';
+import Jobs from './Pages/Jobs';
+
+
+const router = createBrowserRouter(createRoutesFromElements(
+ 
+    <Route path="/" element={<MainLayout/>}>
+
+      <Route index element={<Home/>} />
+      <Route path="/jobs" element={<Jobs/>}/>
+
+    </Route>
+  )
+);
 
 export default function Wrapper() {
-  return (
-    <Fragment>
-      <Navbar />
-      <HeroSection />
-      <Navigators />
-      <JobListings />
-    </Fragment>
 
-   
-  );
+  return (
+
+
+  <RouterProvider router={router} />
+
+  
+  )
 }
