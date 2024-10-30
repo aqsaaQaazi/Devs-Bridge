@@ -12,7 +12,6 @@ export default function Wrapper() {
       <HeroSection />
       <Navigators />
       <JobListings />
-      
     </Fragment>
 
    

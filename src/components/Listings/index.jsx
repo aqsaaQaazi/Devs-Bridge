@@ -291,7 +291,8 @@ const Recents = jobs.slice(0,3);
               type={job.type}
               description={job.description}
               salary={job.salary}
-              link={job.link} />
+              link={job.link}
+              location={job.location} />
               
           ))}
           <ViewAllBtn/>
