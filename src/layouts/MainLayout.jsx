@@ -6,6 +6,7 @@ export default function MainLayout (){
         <div>
             <Navbar/>
             <Outlet/>
+            {/* footer */}
         </div>
         )
 }

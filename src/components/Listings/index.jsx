@@ -1,5 +1,6 @@
 import JobCard from "../eachListComponent";
-import ViewAllBtn from "../ViewAllJobsButton";
+
+
 
 export default function JobListings( ) {
 
@@ -295,7 +296,7 @@ const Recents = jobs.slice(0,3);
               location={job.location} />
               
           ))}
-          <ViewAllBtn/>
+          
          </div>
       </div>
     </section>

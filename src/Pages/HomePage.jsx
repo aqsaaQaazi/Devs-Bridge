@@ -1,6 +1,7 @@
 import HeroSection from "../components/hero/index"
 import Navigators from "../components/ui-navigations"
 import JobListings from "../components/Listings"
+import ViewAllBtn from "../components/ViewAllJobsButton"; 
 
 export default function Home(){
 return(
@@ -9,6 +10,7 @@ return(
         <HeroSection/>
         <Navigators/>
         <JobListings/>
+        <ViewAllBtn/>
 
     </div>
 )

@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom"
+
 export default function Navigators (){
     return(
         // {/* <!-- Developers and Employers --> */}
@@ -21,12 +23,12 @@ export default function Navigators (){
                             Browse our React jobs and start your career today
                             
                         </p>
-                        <a
-                            href="/"
+                        <Link
+                            to="/jobs"
                             className="inline-block 
                             bg-transparent hover:bg-green-500 hover:text-white rounded-lg px-4 py-2 active:bg-green-600 transition   text-green-500 border-2 font-semibold border-green-500 duration-300 text-sm md:text-base" >
                             Browse Jobs
-                        </a>
+                        </Link>
                     </div>
 
                     {/* employers card */}
@@ -41,12 +43,12 @@ export default function Navigators (){
                         className="mt-2 mb-4 text-gray-700 text-sm md:text-base">
                         List your job to find the perfect developer for the role
                         </p>
-                        <a
-                            href="/add-job.html"
+                        <Link
+                            to="/add-job.html"
                             className="inline-block 
                             bg-transparent hover:bg-indigo-500 hover:text-white rounded-lg px-4 py-2 active:bg-indigo-600 transition   text-indigo-500 border-2 font-semibold border-indigo-500 duration-300 text-sm md:text-base">
                             Add Job
-                        </a>
+                        </Link>
                 </div>
             </div>
         </div>

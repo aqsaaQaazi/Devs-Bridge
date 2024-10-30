@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { FaMapMarker } from "react-icons/fa";
+
+import {Link} from 'react-router-dom'
 
 export default function JobCard(jobs) {
   const [showDescription, SetShowDescription] = useState(false);
@@ -39,19 +40,19 @@ export default function JobCard(jobs) {
       </div>
 
       <div
-      className="text-blue-700 text-sm  ml-4 -mt-6 mb-3 w-full h-16">
+      className="text-blue-700 text-sm lg:ml-0 md:ml-0 ml-4 -mt-6 mb-3 w-full h-16">
         <i
         className="fa-solid fa-location-dot text-lg mr-2"></i>
         {jobs.location}
        
       </div>
 
-      <a
-        href={jobs.link}
+      <Link
+        to={jobs.link}
         className="h-[36px] bg-gradient-to-r from-green-400 to-green-500 opacity-80 hover:opacity-100 text-white px-4 py-2 rounded-lg text-center text-sm shadow transition-all duration-300 absolute bottom-4 right-6"
       >
         View Job Description
-      </a>
+      </Link>
     </div>
   );
 }

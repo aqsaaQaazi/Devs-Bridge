@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 export default function HeroSection() {
     return (
       <section 
@@ -23,12 +25,12 @@ export default function HeroSection() {
                 <p className="text-base md:text-lg text-white mb-6">
                     Find the React role that complements your abilities and helps you achieve your career objectives.
                 </p>
-                <a
-                    href="/apply"
+                <Link
+                    to="/apply"
                     className=" text-white px-6 py-3 rounded-lg shadow-lg active:bg-green-600 hover:bg-green-500 border-2 border-green-500 bg-transparent transition duration-300 text-sm md:text-base"
                 >
                     Get Started
-                </a>
+                </Link>
         </div>
       </section>
     );
