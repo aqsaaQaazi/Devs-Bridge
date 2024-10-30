@@ -3,7 +3,7 @@ import Navbar from "./components/header";
 import HeroSection from "./components/hero";
 import Navigators from "./components/ui-navigations";
 import JobListings from "./components/Listings";
-import ViewAllBtn from "./components/ViewAllJobsButton";
+
 
 export default function Wrapper() {
   return (
