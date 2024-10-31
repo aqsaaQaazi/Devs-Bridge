@@ -2,7 +2,7 @@ import JobCard from "../eachListComponent";
 
 
 
-export default function JobListings( ) {
+export default function JobListings( {isHome = false}) {
 
 //   const jobs = [
 //     {
@@ -274,18 +274,21 @@ const jobs = [
   }
 ];
 
-const Recents = jobs.slice(0,3);
+
+  const jobListings = isHome ? jobs.slice(0,3 ) : jobs;
+
+
 
 
   return(
     <section className="bg-gradient-to-bl from-cyan-800 to-green-300 px-4 py-10 bg-opacity-75">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-white py-3 mb-8 text-center rounded-lg">
-          Browse Jobs
+         {isHome ? "Recent Jobs" : "Browse Jobs" } 
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {Recents.map(job  => (
+          {jobListings.map(job  => (
             <JobCard 
                key={job.id}
               title={job.title}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function Navbar() {
@@ -27,6 +27,9 @@ export default function Navbar() {
             document.removeEventListener('mousedown', handleOutsideClick);
         };
     }, []);
+
+    const ActiveLink = ({isActive}) => isActive ? "text-green-500 hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg shadow-md bg-white focus:bg-green-500 focus:text-white active:text-white" : "text-white hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg active:bg-green-500 active:text-white"
+    
     
     return (
         <>
@@ -45,35 +48,35 @@ export default function Navbar() {
                 </div>
 
                 <div className="hidden lg:flex space-x-6">
-                    <Link to="/" className="text-white hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg active:bg-green-500 active:text-white">
+                    <NavLink to="/" className={ActiveLink}>
                         Home
-                    </Link>
+                    </NavLink>
 
-                    <Link to="/jobs" className="text-white hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg active:bg-green-500 active:text-white">
+                    <NavLink to="/jobs" className={ActiveLink}>
                         Jobs
-                    </Link>
+                    </NavLink>
 
-                    <Link to="/" className="text-white hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg active:bg-green-500 active:text-white">
+                    <NavLink to="/" className={ActiveLink}>
                         Add Job
-                    </Link>
+                    </NavLink>
 
-                    <Link to="/" className="text-white hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg active:bg-green-500 active:text-white">
+                    <NavLink to="/" className={ActiveLink}>
                         About
-                    </Link>
+                    </NavLink>
 
-                    <Link to="/" className="text-white hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg active:bg-green-500 active:text-white">
+                    <NavLink to="/" className={ActiveLink}>
                         Contact
-                    </Link>
+                    </NavLink>
                 </div>
 
                 {isOpen && (
                     <div ref={menuRef} className="absolute top-16 right-0 w-2/5 bg-gradient-to-tr rounded-lg shadow-lg lg:hidden transition-transform duration-300 ease-in-out">
                         <div className="flex flex-col space-y-2 p-4">
-                            <Link to="/" className="text-white hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg active:bg-green-500 active:text-white" onClick={closeMenu}>
+                            <Link to="/" className="text-white hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg active:bg-green-500 active:text-white"  onClick={closeMenu}>
                                 Home
                             </Link>
 
-                            <Link to="/jobs" className="text-white hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg active:bg-green-500 active:text-white" onClick={closeMenu}>
+                            <Link to="/jobs" className= "text-white hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg active:bg-green-500 active:text-white"  onClick={closeMenu}>
                                 Jobs
                             </Link>
 
@@ -81,11 +84,11 @@ export default function Navbar() {
                                 Add Job
                             </Link>
 
-                            <Link to="/" className="text-white hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg active:bg-green-500 active:text-white" onClick={closeMenu}>
+                            <Link to="/" className= "text-white hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg active:bg-green-500 active:text-white"  onClick={closeMenu}>
                                 About
                             </Link>
 
-                            <Link to="/" className="text-white hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg active:bg-green-500 active:text-white" onClick={closeMenu}>
+                            <Link to="/" className= "text-white hover:text-green-600 transition-colors duration-300 hover:bg-white p-2 rounded-lg active:bg-green-500 active:text-white" onClick={closeMenu}>
                                 Contact
                             </Link>
                         </div>

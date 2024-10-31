@@ -5,7 +5,9 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <div className="bg-gradient-to-bl from-cyan-800 to-green-300 px-0 py-0 bg-opacity-75">
+      <App />
+    </div>
   </StrictMode>,
 
   
